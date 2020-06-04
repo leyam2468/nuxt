@@ -9,6 +9,18 @@ import navbar from '~/components/navbar.vue'
 export default {
     components: {
         navbar
+    },
+    head() {
+        return {
+            titleTemplate: '%s- Axel 4 Design',
+            metaTemplate: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Web And Graphic Design'
+                }
+            ]
+        }
     }
 }
 </script>
@@ -30,5 +42,10 @@ html {
 *:after {
     box-sizing: border-box;
     margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
 }
 </style>

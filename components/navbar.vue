@@ -2,10 +2,14 @@
     <div>
         <div class="nav">
             <div class="container">
-                <nuxt-link to="/" class="nav-brand">Axel 4 Design</nuxt-link>
+                <nuxt-link to="/" class="nav-brand">
+                    Axel 4 Design
+                    <logo />
+                </nuxt-link>
                 <div class="nav-bar">
                     <nuxt-link to="/" class="nav-link">Home</nuxt-link>
                     <nuxt-link to="/about" class="nav-link">About</nuxt-link>
+                    <nuxt-link to="/blog" class="nav-link">Blog</nuxt-link>
                 </div>
             </div>
         </div>
@@ -13,7 +17,12 @@
 </template>
 
 <script>
-export default {}
+import Logo from '~/components/Logo.vue'
+export default {
+    components: {
+        Logo
+    }
+}
 </script>
 
 <style scoped>
@@ -51,5 +60,9 @@ a {
 }
 .nav-link:hover {
     color: red;
+}
+svg {
+    width: 20px;
+    height: 20px;
 }
 </style>

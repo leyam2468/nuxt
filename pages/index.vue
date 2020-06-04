@@ -1,22 +1,22 @@
 <template>
     <div class="container">
-        <logo />
+        <h2>Welcome To Home Page</h2>
     </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-    components: {
-        Logo
+    components: {},
+    head() {
+        return {
+            title: 'Home'
+        }
     }
 }
 </script>
 
 <style scoped>
-.container {
-    margin: 0 auto;
-    width: 90%;
+h2 {
+    font-size: 5rem;
 }
 </style>

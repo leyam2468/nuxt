@@ -1,11 +1,19 @@
 <template>
     <div>
-        <h1>Welcome To About Page</h1>
+        <div class="container">
+            <h1>Welcome To About Page</h1>
+        </div>
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    head() {
+        return {
+            title: 'About'
+        }
+    }
+}
 </script>
 
 <style scoped>
