@@ -2,7 +2,6 @@
     <div>
         <div class="container">
             <h1>Blog</h1>
-
             <PostCard
                 v-for="(post, index) in posts"
                 :key="index"
@@ -13,23 +12,25 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import PostCard from '@/components/PostCard.vue'
 export default {
     components: {
         PostCard
     },
-    asyncData({ $axios, error }) {
-        return $axios
-            .get('http://localhost:30001/posts')
-            .then((response) => {
-                return {
-                    posts: response.data
-                }
+    async fetch({ store, error }) {
+        try {
+            await store.dispatch('posts/fetchPosts')
+        } catch (e) {
+            error({
+                statusCode: 503,
+                message: 'Ther Is no Data Found'
             })
-            .catch((e) => {
-                error({ statusCode: 503, message: 'Ther Is no Data Found' })
-            })
+        }
     },
+    computed: mapState({
+        posts: (state) => state.posts.posts
+    }),
 
     head() {
         return {
