@@ -1,6 +1,6 @@
 <template>
     <div class="Post-card">
-        <h2 class="title">*** {{ post.title }} ***</h2>
+        <h2 class="title">***{{ post.title }} ***</h2>
         <p class="des">{{ post.des }}</p>
         <span class="date">{{ post.date }}</span>
         <span class="view">{{ post.view }}</span>
