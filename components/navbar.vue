@@ -10,6 +10,9 @@
                     <nuxt-link to="/" class="nav-link">Home</nuxt-link>
                     <nuxt-link to="/about" class="nav-link">About</nuxt-link>
                     <nuxt-link to="/blog" class="nav-link">Blog</nuxt-link>
+                    <nuxt-link to="/covid-19" class="nav-link"
+                        >Coved-19</nuxt-link
+                    >
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ export default {
     props: {
         error: {
             type: Number,
-            default: null
+            default: 404
         }
     },
     computed: {

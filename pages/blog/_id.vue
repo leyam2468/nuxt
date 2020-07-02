@@ -21,14 +21,14 @@ export default {
             })
         }
     },
+    computed: mapState({
+        post: (state) => state.posts.post
+    }),
     head() {
         return {
             title: this.post.title
         }
-    },
-    computed: mapState({
-        post: (state) => state.posts.post
-    })
+    }
 }
 </script>
 

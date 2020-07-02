@@ -12,14 +12,7 @@ export default {
     },
     head() {
         return {
-            titleTemplate: '%s- Axel 4 Design',
-            metaTemplate: [
-                {
-                    hid: 'description',
-                    name: 'description',
-                    content: 'Web And Graphic Design'
-                }
-            ]
+            titleTemplate: '%s- Axel 4 Design'
         }
     }
 }
